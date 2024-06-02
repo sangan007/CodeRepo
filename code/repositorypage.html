@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository</title>
+    <link rel="stylesheet" href="repositorypage.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header-left">
+            <h1>Repository</h1>
+        </div>
+        <div class="header-right">
+            <div class="user-info">
+                <img src="sangan (2).jpeg" alt="User Profile Picture">
+                <span class="username">Sangeerth B</span>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#">Repositories</a></li>
+                    <li><a href="#">Issues</a></li>
+                    <li><a href="#">Pull Requests</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </nav>
+            <div class="notifications">
+                <a href="#"><i class="fa fa-bell"></i></a>
+            </div>
+            <div class="user-settings">
+                <a href="#"><i class="fa fa-cog"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="repository-section">
+        <h1>Repository</h1>
+        <div class="search-form">
+            <input type="text" id="searchInput" placeholder="Search repositories by language...">
+            <button onclick="searchRepositories()">Search</button>
+        </div>
+        <div class="actions">
+            <select id="languageSelect">
+                <option value="">Sort by Language</option>
+                <option value="C">C</option>
+                <option value="C++">C++</option>  
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+            </select>
+            <button onclick="sortRepositories()">Sort</button>
+            <a href="#" onclick="showCreateForm()">Create Repository</a>
+        </div>
+        <div class="search-results">
+        </div>
+        <div class="create-repo-form">
+            <h2>Create New Repository</h2>
+            <input type="text" id="repoName" placeholder="Repository Name">
+            <input type="text" id="repoLanguage" placeholder="Language">
+            <button onclick="createRepository()">Create Repository</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
