@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Page</title>
-<link rel="stylesheet" href="repoStudentSignup.css">
+<title>Sign Up Page</title>
+<link rel="stylesheet" href="repoTeacherSignup.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
  
 <div class="container">
-    <h2>STUDENT SIGNUP</h2>
-    <form action="repositorypage.html" method="post" target="_blank">
+    <h2>TEACHER'S SIGNUP</h2>
+    <form id="signup-form" action="repositorypage.html" method="post"onsubmit="return matchpassword()">
         <div class="input-group">
             <label for="username">Student ID</label>
             <input type="text" id="username" name="username" required>
@@ -28,10 +28,30 @@
             <button type="submit" class="btn">Login</button>
         </div>
         <div class="forgot-password">
-            <center><a href="#">Forgot password?</a></center>
+            <center><p id="show"></p></center>
         </div>
     </form>
 </div>
+<script>
+    function matchpassword() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm-password").value;
+        var message = document.getElementById("show");
+        
+        if (password.length < 8) {
+            message.innerText = "Password must be at least 8 characters long";
+            return false;
+        }
+
+        if (password !== confirmPassword) {
+            message.innerText = "Passwords do not match";
+            return false;
+        }
+
+        
+        return true;
+    }
+</script>
  
 </body>
 </html>

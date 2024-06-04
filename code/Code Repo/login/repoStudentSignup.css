@@ -76,16 +76,14 @@ h2 {
     background-color: #2ea043;
 }
 
-.forgot-password {
+.error-btn {
     text-align: center;
     margin-top: 20px;
 }
 
-.forgot-password a {
-    color: #58a6ff;
+.error-btn {
+    color: #f83c3c;
     text-decoration: none;
 }
 
-.forgot-password a:hover {
-    text-decoration: underline;
-}
+
