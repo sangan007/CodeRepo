@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" href="RepoStudentLogin.css">
+</head>
+<body>
+<div class="container">
+    <h2>CODE REPOSITORY</h2>
+    <h3>STUDENT LOGIN</h3>
+    <form id="loginForm">
+        <div class="input-group">
+            <label for="username">Student ID</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="btn-container">
+            <button type="button" class="btn" onclick="login()">Login</button>
+        </div>
+        <div class="forgot-password">
+            <center><a href="#">Forgot password?</a></center>
+        </div>
+    </form>
+</div>
+<script>
+async function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    const response = await fetch('http://localhost:8000/api/login', { // Ensure the URL is correct
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+    });
+
+    if (response.ok) {
+        window.location.href = 'student_dashboard.html'; // Redirect to student dashboard
+    } else {
+        alert('Invalid login credentials');
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up Page</title>
+<link rel="stylesheet" href="RepoStudentSignup.css">
+</head>
+<body>
+<div class="container">
+    <h2>CODE REPOSITORY</h2>
+    <h3>STUDENT SIGN UP</h3>
+    <form id="signupForm">
+        <div class="input-group">
+            <label for="username">Student ID</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="btn-container">
+            <button type="button" class="btn" onclick="signup()">Sign Up</button>
+        </div>
+    </form>
+</div>
+<script>
+async function signup() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    const response = await fetch('http://localhost:8000/api/signup', { // Ensure the URL is correct
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password, role: 'student' })
+    });
+
+    if (response.ok) {
+        window.location.href = 'student_login.html'; // Redirect to login page
+    } else {
+        alert('Signup failed');
+    }
+}
+</script>
+</body>
+</html>

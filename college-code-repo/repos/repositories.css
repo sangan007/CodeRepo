@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    background-color: #161b22;
+    color: #c9d1d9;
+    padding: 10px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #58a6ff;
+    border-radius: 5px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.navigation {
+    background-color: #161b22;
+    padding: 10px;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #c9d1d9;
+}
+
+.navigation ul li a:hover {
+    color: #fff;
+}
+
+.repository-section,
+.additional-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #161b22;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.repo-info,
+.additional-section {
+    flex-basis: calc(50% - 10px);
+    background-color: #0d1117;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.repo-info:hover,
+.additional-section:hover {
+    transform: scale(1.05);
+}
+
+.repo-info h2,
+.additional-section h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c9d1d9;
+}
+
+.repo-info p {
+    margin: 0 0 10px;
+    color: #c9d1d9;
+}
+
+.repo-info ul,
+.additional-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.repo-info li,
+.additional-section li {
+    margin-bottom: 5px;
+}
+
+.repo-info li a,
+.additional-section li a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.repo-info li a:hover,
+.additional-section li a:hover {
+    text-decoration: underline;
+}
